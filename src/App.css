@@ -1,0 +1,212 @@
+.app {
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #243c32;
+}
+
+.app *,
+.app *::before,
+.app *::after {
+  box-sizing: inherit;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.app h1 {
+  margin: 12px 0;
+  font-size: clamp(40px, 8vw, 56px);
+  line-height: 1.1;
+}
+
+.app header p {
+  line-height: 1.6;
+  color: #58675e;
+}
+
+.meal-form,
+.meal-results {
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #243c320d;
+}
+
+.meal-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.meal-form label {
+  font-weight: 600;
+}
+
+.meal-form textarea,
+.meal-form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 14px;
+  border: 1px solid #cbd5cc;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #243c32;
+  font: inherit;
+  font-size: 16px;
+}
+
+.meal-form textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.meal-form input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: #356449;
+}
+
+.app button {
+  min-height: 48px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #356449;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.app button:hover:not(:disabled) {
+  background: #284f39;
+}
+
+.app textarea:focus-visible,
+.app select:focus-visible,
+.app input:focus-visible,
+.app button:focus-visible {
+  outline: 3px solid #b78b38;
+  outline-offset: 3px;
+}
+
+.app button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.status:empty {
+  display: none;
+}
+
+.meal-results {
+  margin-top: 24px;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+
+.meal-results > h2:first-child {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.meal-results h1,
+.meal-results h2,
+.meal-results h3 {
+  margin: 24px 0 12px;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.meal-results ul,
+.meal-results ol {
+  padding-left: 24px;
+}
+
+.meal-results li {
+  margin-bottom: 10px;
+}
+
+.meal-results p {
+  margin-bottom: 16px;
+}
+
+.meal-results .status {
+  margin-top: 12px;
+}
+
+.meal-note {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8e3;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #58675e;
+}
+
+@media (max-width: 450px) {
+  .app {
+    padding: 32px 16px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .meal-form,
+  .meal-results {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .meal-results button {
+    width: 100%;
+  }
+}
+
+/* logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.app .brand h1 {
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+}
